@@ -6,7 +6,8 @@ export default function Dropdown() {
   const links = [
     { href: '/projects', label: 'Projects' },
     { href: '/skills', lable: 'Skills' },
-    { href: '/about', lable: 'About me' },
+    { href: '/about', lable: 'About' },
+    {href: '/contact', label: 'Contact'},
   ];
 
   return (
