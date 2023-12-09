@@ -1,23 +1,23 @@
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment, useEffect, useRef, useState } from "react";
-import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { Bars3Icon } from "@heroicons/react/20/solid";
 
-export default function Dropdown() {
+export default function Hamburger() {
   const links = [
+    { href: '/', label: 'Home'},
     { href: '/projects', label: 'Projects' },
-    { href: '/skills', lable: 'Skills' },
-    { href: '/about', lable: 'About' },
+    { href: '/skills', label: 'Skills' },
+    { href: '/about', label: 'About' },
     {href: '/contact', label: 'Contact'},
   ];
 
   return (
-    <div className="absolute top-5 right-5 w-56 text-right">
+    <div className="text-right">
       <Menu as="div" className="relative inline-block text-left">
         <div>
           <Menu.Button className="inline-flex w-full justify-center rounded-md bg-black/20 px-4 py-2 text-sm font-medium text-white hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
-            <ChevronDownIcon
-              className="-mr-1 ml-2 h-5 w-5 text-violet-200 hover:text-violet-100"
-              aria-hidden="true"
+            <Bars3Icon
+              className="-mr-1 ml-2 p-1 h-7 w-7 rounded-md ring-1 ring-white text-white"
             />
           </Menu.Button>
         </div>
@@ -39,7 +39,7 @@ export default function Dropdown() {
                   <a
                     href={link.href}
                     className={`${
-                      active ? "bg-violet-500 text-white" : "text-gray-900"
+                      active ? "bg-violet-900 text-white" : "text-gray-900"
                       } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                   >
                     {link.label}
