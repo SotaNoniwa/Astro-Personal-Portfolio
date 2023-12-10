@@ -1,7 +1,7 @@
 ---
 import "@fontsource/space-mono";
 import Footer from "../components/Footer.astro";
-import Hamburger from "../components/Hamburger.tsx";
+import Hamburger from "../components/Hamburger";
 
 const { title } = Astro.props;
 ---
@@ -23,7 +23,7 @@ const { title } = Astro.props;
   </head>
   <body class="m-4 text-center">
     <nav class="flex justify-center p-4">
-      <h1 class="self-center text-3xl font-bold text-fuchsia-900">{title}</h1>
+      <h1 class="self-center text-3xl font-bold inline-block bg-gradient-to-r from-indigo-600 via-fuchsia-700 to-red-600 text-transparent bg-clip-text">{title}</h1>
       <Hamburger client:load />
     </nav>
     <slot />
@@ -37,7 +37,7 @@ const { title } = Astro.props;
   }
   * {
     font-family: "Space Mono", monospace;
-    color: white;
+    color: rgb(226 232 240);
   }
 
 </style>
