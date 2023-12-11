@@ -1,0 +1,11 @@
+---
+import Chat from './Chat'
+import GridCard from './GridCard.astro';
+---
+
+<GridCard id="contact-me">
+	<div class="flex flex-col gap-6">
+		<h2>Contact Me</h2>
+		<Chat client:visible />
+	</div>
+</GridCard>

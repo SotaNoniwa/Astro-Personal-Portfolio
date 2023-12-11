@@ -6,7 +6,6 @@ export default function Hamburger() {
   const links = [
     { href: '/', label: 'Home'},
     { href: '/projects', label: 'Projects' },
-    { href: '/skills', label: 'Skills' },
     { href: '/about', label: 'About' },
     {href: '/contact', label: 'Contact'},
   ];
