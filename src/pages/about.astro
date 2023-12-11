@@ -1,0 +1,189 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout title="About">
+  <p class="p-4 text-left">
+    I am a CS student and self-driven developer with primary interest in web application development. I am expected to complete my Bachelor's degree from University of Debrecen in August 2024. This page is about my profile, feel free to take a look with a cup of tea &#9749;
+  </p>
+  <ul class="timeline relative list-none mt-4">
+    <li>
+      <div class="timeline-img">
+        <img class="round-img" src="images/kyoto.jpg" alt="Kyoto">
+      </div>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4>1998<br>Birth in Kyoto</h4>
+        </div>
+        <div class="timeline-body">
+          <p class="text-muted">My future dream was becoming a Ninja.</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-img">
+        <img class="round-img" src="images/surfing.jpg" alt="Surfing">
+      </div>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4>2011~2014<br>Middle school</h4>
+        </div>
+        <div class="timeline-body">
+          <p class="text-muted">My father loves surfing and I got interested it too. I have enjoyed it even now!</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-img">
+        <img class="round-img" src="images/tennis.jpg" alt="Tennis">
+      </div>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4>2014~2017<br>High school</h4>
+        </div>
+        <div class="timeline-body">
+          <p class="text-muted">I was a member of a tennis club, and it was a great experience collaborating with my
+            doubles partner and teammates.</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-img">
+        <img class="round-img" src="images/dear.jpg" alt="Dear">
+      </div>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4>2017~2021<br>Rakuno University</h4>
+        </div>
+        <div class="timeline-body">
+          <p class="text-muted">I got into the University to learn about wildlife and nature since I love animals
+            and wanted to preserve nature. When I was in 3rd year, I went to Malaysia as a exchange student, and I
+            realize the importance of English. This experience inspired me to learn English, and start considering
+            about study abroad.
+          </p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-img">
+        <img class="round-img" src="images/coding.jpg" alt="Coding">
+      </div>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4>2021~2024<br>University of Debrecen</h4>
+        </div>
+        <div class="timeline-body">
+          <p class="text-muted">I decided to change my major because job oppotunities for IT industory is huge and
+            IT career is quite interesting for me.
+          </p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="timeline-img">
+        <img class="round-img" src="images/future.jpg" alt="Future">
+      </div>
+      <div class="timeline-panel">
+        <div class="timeline-heading">
+          <h4>2024~<br>My future</h4>
+        </div>
+        <div class="timeline-body">
+          <p class="text-muted">My primary goal is to specialize in web and software development. I plan to achieve
+            this by continuously advancing my skills through both on-the-job learning and self-study.
+          </p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</Layout>
+
+<style>
+.timeline:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 80px;
+  width: 4px;
+  margin-left: -1.5px;
+  content: "";
+  background-color: #640075;
+}
+
+.timeline>li {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 50px;
+}
+
+.timeline-panel {
+  position: relative;
+  float: right;
+  width: 100%;
+  padding: 0 20px 0 180px;
+  min-height: 200px;
+}
+
+.timeline-panel h4,
+.timeline-panel p {
+  text-align: left;
+}
+
+.timeline>li:after,
+.timeline>li:before {
+  display: table;
+  content: "";
+}
+
+.timeline>li:after {
+  clear: both;
+}
+
+.timeline-img {
+  position: absolute;
+  z-index: 10;
+  width: 160px;
+  height: 160px;
+  left: 0;
+  margin-left: 0;
+  border: 7px solid #640075;
+  border-radius: 100%;
+}
+
+.round-img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+/* iPhone X || 375 x 812 || Default */
+@media only screen and (max-width: 812px) {
+  .grid-container {
+    flex-direction: column;
+  }
+
+  .timeline:before {
+    left: 50%;
+  }
+
+  .timeline-panel {
+    padding: 180px 2rem 0 2rem;
+  }
+
+  .timeline-panel h4,
+  .timeline-panel p {
+    padding: 10px;
+  }
+
+  .timeline-heading,
+  .timeline-body {
+    background-color: rgb(30 41 59);
+    border: medium solid #640075;
+  }
+
+  .timeline-img {
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+</style>
