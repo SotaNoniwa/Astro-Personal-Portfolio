@@ -1,6 +1,6 @@
 ---
 title: Personal Portfolio Website
-tags: [Astro, TailwindCSS, Netlify]
+tags: [Astro, TailwindCSS, Render]
 image:
   src: /images/astro-website.png
   alt: "astro-website"
